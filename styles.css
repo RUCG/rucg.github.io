@@ -1,0 +1,377 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #1e1e1e;
+}
+
+header {
+    position: relative;
+    /* Ermöglicht, dass das Bild relativ zu diesem Element positioniert wird */
+    background-color: #333;
+    padding: 10px 20px;
+    height: 100px;
+    /* Höhe des Headers */
+    overflow: visible;
+    /* Stellt sicher, dass das Bild nicht abgeschnitten wird */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section Layout */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #ff6f61, #de4463);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Section Layout */
+
+.hero {
+    position: relative;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #ff6f61, #de4463);
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 50%;
+    color: #fff;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    /* Höherer Z-Index, damit der Text vor dem Bild liegt */
+}
+
+.hero-image {
+    position: absolute;
+    right: -240px;
+    /* Startposition des Bildes, außerhalb des Bildschirms, angepasst für kleinere Bildgröße */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    /* Niedriger Z-Index, damit das Bild hinter dem Text liegt */
+    transition: right 2s ease-in-out;
+    /* Sanfter Übergang */
+}
+
+.hero-image img {
+    max-width: 240px;
+    /* Verkleinere das Bild um 20% */
+    border-radius: 50%;
+}
+
+/* CSS für die Scroll-Animation */
+.hero-image.scrolled {
+    right: calc(110% - 120px);
+    /* Bild bewegt sich in die Mitte des Bildschirms, angepasst für kleinere Bildgröße */
+}
+
+.hero-content {
+    max-width: 50%;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin: 0 0 20px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin: 0 0 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #de4463;
+}
+
+.projects {
+    padding: 50px 20px;
+    background-color: #2a2a2a;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    background-color: #ff6f61;
+    color: #fff;
+    /* Setzt die Textfarbe auf Weiß */
+}
+
+.project-card:hover h3 a {
+    color: #fff;
+    /* Setzt die Linkfarbe auf Weiß */
+}
+
+.project-card:hover p {
+    color: #fff;
+    /* Setzt die Textfarbe in den Absätzen auf Weiß */
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.project-card a {
+    color: #ff6f61;
+    /* Ersetze dies durch die gewünschte Farbe */
+    text-decoration: none;
+    /* Entfernt die Unterstreichung */
+    font-weight: bold;
+    /* Optional: Macht den Text fett */
+}
+
+.project-card a:hover {
+    color: #de4463;
+    /* Farbe beim Hover-Effekt */
+    text-decoration: underline;
+    /* Optional: Unterstreichung beim Hover-Effekt */
+}
+
+.project-card p {
+    font-size: 1em;
+}
+
+.project-detail {
+    padding: 50px 20px;
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+}
+
+.project-detail h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.project-detail p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.contact {
+    padding: 50px 20px;
+    background-color: #444;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    top: -5px;
+    /* Negativer Wert, um das Bild nach oben zu verschieben */
+    left: 20px;
+    /* Position von der linken Seite */
+    height: 150px;
+    /* Höhe des Logos, passe dies an, um die gewünschte Größe zu erhalten */
+    z-index: 2;
+    /* Damit das Bild über dem Header und der Hero-Sektion liegt */
+}
+
+/* Newsletter-Sektion */
+.newsletter {
+    background-color: #444;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.newsletter h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 500px;
+    /* Begrenzung der Breite des Formulars */
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex: 1;
+    /* Füllt den verfügbaren Raum aus */
+    min-width: 200px;
+    /* Mindestbreite des Eingabefelds */
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #de4463;
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.social-link:hover {
+    color: #ff6f61;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* Buy Me a Coffee Section */
+.buy-me-a-coffee {
+    background-color: #333;
+    padding: 60px 0;
+}
+
+.buy-me-a-coffee .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* Add some spacing between the elements */
+}
+
+@media (min-width: 768px) {
+    .buy-me-a-coffee .container {
+        flex-direction: row;
+        /* Align items in a row for larger screens */
+        align-items: center;
+    }
+}
+
+.buy-me-a-coffee h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.buy-me-a-coffee p {
+    font-size: 1.125rem;
+    color: #d1d5db;
+    margin-bottom: 20px;
+}
+
+.coffee-image {
+    text-align: center;
+}
+
+.coffee-cup {
+    width: 350px;
+    /* Adjusted size to make the image bigger */
+    margin-top: 20px;
+}
+
+.buy-me-a-coffee .btn {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-me-a-coffee .btn:hover {
+    background-color: #de4463;
+    transform: translateY(-2px);
+    /* Adds a lift effect on hover */
+}
