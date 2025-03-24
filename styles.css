@@ -205,6 +205,12 @@ nav ul li a {
     margin-bottom: 40px;
 }
 
+.project-detail img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
 .contact {
     padding: 50px 20px;
     background-color: #444;
@@ -374,4 +380,10 @@ footer {
     background-color: #de4463;
     transform: translateY(-2px);
     /* Adds a lift effect on hover */
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
 }
