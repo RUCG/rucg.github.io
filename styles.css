@@ -387,3 +387,64 @@ footer {
     height: auto;
     margin: 20px 0;
 }
+
+/* Podcast Section */
+.podcast {
+    background-color: #ff6f61;
+    /* Blauton */
+    padding: 60px 0;
+}
+
+.podcast .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .podcast .container {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.podcast h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.podcast p {
+    font-size: 1.125rem;
+    color: #d1d5db;
+    margin-bottom: 20px;
+}
+
+.podcast .btn {
+    padding: 10px 20px;
+    background-color: #10b981;
+    /* Grün */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.podcast .btn:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+}
+
+.podcast-image {
+    text-align: center;
+}
+
+.podcast iframe {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
