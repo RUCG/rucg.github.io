@@ -22,6 +22,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#buy-me-a-coffee">Buy Me a Coffee</a></li> <!-- New navigation link -->
+                <li><a href="#podcast">Podcast</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -32,7 +33,7 @@
         <div class="hero-content">
             <h1>Welcome to My Portfolio</h1>
             <p>Discover my work and projects.</p>
-            <a href="#projects" class="btn">View Projects</a>
+            <a href="projekt5.html" class="btn">View Projects</a>
         </div>
         <div class="hero-image">
             <img src="images/Screenshot.png"
@@ -73,10 +74,18 @@
     <!-- Newsletter-Anmeldeformular -->
     <section id="newsletter" class="newsletter">
         <h2>Abonniere unseren Newsletter</h2>
-        <form id="newsletter-form" action="submit_form.php" method="post">
+        <form id="newsletter-form">
+            <!-- <form id="newsletter-form" action="submit_form.php" method="post"></form> -->
             <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
             <button type="submit" class="btn">Abonnieren</button>
+            <p id="form-message" style="color: #ff6f61; margin-top: 10px;"></p>
         </form>
+        <script>
+            document.getElementById("newsletter-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+                document.getElementById("form-message").innerHTML = "GitHub Pages erlaubt leider kein PHP 😢<br><br>Aber du findest unten meine Social-Links oder kannst mir direkt per <br>E-Mail schreiben.";
+            });
+        </script>
     </section>
 
     <!-- Buy Me a Coffee Section -->
@@ -138,11 +147,17 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-    </footer>
+    <div id="footer-placeholder"></div>
 
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    </script>
 </body>
 
 </html>
