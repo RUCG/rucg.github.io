@@ -13,19 +13,7 @@
 </head>
 
 <body>
-    <header style="background: linear-gradient(135deg, #ff6f61, #de4463);">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projekt1.html">Akkutemperatur-Visualisierung</a></li>
-                <li><a href="projekt2.html">FFT-Getriebeanalyse</a></li>
-                <li><a href="projekt3.html">Techstack-Bot</a></li>
-                <li><a href="projekt4.html">ML-Ausgabenkategorisierung</a></li>
-                <li><a href="projekt5.html" class="active">Akku-Degradation Prognose</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <section class="project-detail">
         <h1>FFT-Vibrationsanalyse für Getriebediagnose</h1>
@@ -53,9 +41,17 @@
             loading="lazy">
     </section>
 
-    <footer style="background: linear-gradient(135deg, #ff6f61, #de4463);">
-        <p>&copy; 2024 Mein Portfolio. Alle Rechte vorbehalten.</p>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    </script>
 </body>
 
 </html>
