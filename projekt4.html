@@ -4,49 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt 4 - ML-Ausgabenkategorisierung</title>
-    <meta name="description"
-        content="Python-basiertes Machine-Learning-Tool zur automatischen Kategorisierung persönlicher Ausgaben.">
-    <meta name="keywords"
-        content="Machine Learning, Python, Pandas, Scikit-learn, Ausgabenkategorisierung, Datenklassifikation">
-    <link rel="stylesheet" href="styles.css"> <!-- Verlinke die Haupt-CSS-Datei -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap"
+    <title>Smart Expenses ML | Gian Ruchti</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700&display=swap"
         rel="stylesheet">
+    <script defer src="scripts.js"></script>
 </head>
 
 <body>
     <div id="header-placeholder"></div>
 
-    <section class="project-detail">
-        <h1>ML-gestütztes Tool zur Ausgabenkategorisierung</h1>
-        <h2>Projektbeschreibung</h2>
+    <section class="project-detail-header">
+        <div class="container">
+            <h1>Smart Expenses ML</h1>
+            <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 1rem auto;">
+                Automatische Kategorisierung persönlicher Ausgaben mittels Machine Learning.
+            </p>
+        </div>
+    </section>
+
+    <div class="container project-detail-content">
+        <div class="project-meta">
+            <div class="meta-item">
+                <span class="meta-label">Stack</span>
+                <span class="meta-value">Pandas, Scikit-learn</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Goal</span>
+                <span class="meta-value">Automation</span>
+            </div>
+        </div>
+
+        <h2>How it works</h2>
         <p>
             In diesem privaten Projekt entwickelte ich ein Python-Tool zur automatischen Kategorisierung persönlicher
             Ausgaben.
             Ziel war es, mithilfe eines Machine-Learning-Modells Transaktionen basierend auf dem Buchungstext in
             vordefinierte Kategorien einzuordnen.
         </p>
-        <h2>Technische Details</h2>
-        <ul>
-            <li><strong>Technologien:</strong> Python, Pandas, Scikit-learn, CSV</li>
-            <li><strong>Projektart:</strong> Eigenständig entwickelt (Freizeitprojekt)</li>
-            <li><strong>Fokus:</strong> Machine Learning, Datenklassifikation, Benutzeroberfläche</li>
-        </ul>
-        <img src="images/Ausgaben_kategorisierung.png"
-            alt="Benutzeroberfläche des Python-Tools zur automatischen Kategorisierung persönlicher Ausgaben"
-            loading="lazy" class="project-image">
-    </section>
+
+        <img src="images/Ausgaben_kategorisierung.png" alt="Expenses Tool UI" class="detail-image">
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html#projects" class="btn">← Back to Projects</a>
+        </div>
+    </div>
 
     <div id="footer-placeholder"></div>
-
     <script>
-        fetch("header.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("header-placeholder").innerHTML = data);
-
-        fetch("footer.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        fetch("header.html").then(res => res.text()).then(data => document.getElementById("header-placeholder").innerHTML = data);
+        fetch("footer.html").then(res => res.text()).then(data => document.getElementById("footer-placeholder").innerHTML = data);
     </script>
 </body>
 

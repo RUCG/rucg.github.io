@@ -1,163 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt 4 - ML-gestützte Ausgabenkategorisierung</title>
+    <title>Gian Ruchti | Portfolio</title>
     <meta name="description"
-        content="Python-basiertes Machine-Learning-Tool zur automatischen Kategorisierung persönlicher Ausgaben.">
-    <meta name="keywords"
-        content="Machine Learning, Python, Pandas, Scikit-learn, Ausgabenkategorisierung, Datenklassifikation">
+        content="Portfolio of Gian Ruchti - Data Scientist & Developer specializing in ML, Python, and Battery Analytics.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@700&display=swap"
+        rel="stylesheet">
     <script defer src="scripts.js"></script>
 </head>
 
 <body>
+
     <!-- Navigation -->
     <header>
-        <img src="images/bereal.png" alt="Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#buy-me-a-coffee">Buy Me a Coffee</a></li> <!-- New navigation link -->
-                <li><a href="#podcast">Podcast</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="logo">Gian Ruchti</div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Work</a></li>
+                    <li><a href="#podcast">Podcast</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Discover my work and projects.</p>
-            <a href="projekt5.html" class="btn">View Projects</a>
-        </div>
-        <div class="hero-image">
-            <img src="images/Screenshot.png"
-                alt="Benutzeroberfläche des Python-Tools zur automatischen Kategorisierung persönlicher Ausgaben"
-                loading="lazy" id="profile-picture">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h4>Hi, I'm Gian 👋</h4>
+                <h1>Building intelligence <br> from data.</h1>
+                <p>Data Scientist, Developer & Tech Enthusiast. I turn complex problems into elegant solutions using
+                    Python, Machine Learning, and Web Technologies.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#contact" class="btn"
+                        style="background: transparent; border: 1px solid var(--border-color); box-shadow: none;">Contact
+                        Me</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <!-- Placeholder for profile image - using the existing one or a generic one if better -->
+                <img src="images/Screenshot2.png" alt="Gian Ruchti" class="profile-img">
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <h2>Meine Projekte</h2>
-        <div class="project-list">
-            <div class="project-card">
-                <h3><a href="projekt1.html">Temperaturvisualisierung für Akkuzellen</a></h3>
-                <p>Visualisierungstool zur Analyse von Akkutemperaturen in E-Nutzfahrzeugen.</p>
-            </div>
-            <div class="project-card">
-                <h3><a href="projekt2.html">FFT-Vibrationsanalyse für Getriebediagnose</a></h3>
-                <p>Tool zur Früherkennung von Getriebeschäden mittels Frequenzanalyse.</p>
-            </div>
-            <div class="project-card">
-                <h3><a href="projekt3.html">Trading-Bot mit Serverintegration</a></h3>
-                <p>Serverbasierter Trading-Bot für automatisierte Kryptowährungstrades und manuelles Trading über ein
-                    Interface.</p>
-            </div>
-            <div class="project-card">
-                <h3><a href="projekt4.html">ML-gestützte Ausgabenkategorisierung</a></h3>
-                <p>Automatische Kategorisierung persönlicher Ausgaben mittels Machine Learning.</p>
-            </div>
-            <div class="project-card">
-                <h3><a href="projekt5.html">Analyse der Akku-Degradation</a></h3>
-                <p>Ein datenbasiertes Tool zur Prognose von Kapazität und Innenwiderstand in Lithium-Ionen-Zellen
-                    basierend auf dem NASA Battery Dataset.</p>
+        <div class="container">
+            <h2 class="section-title">Selected Projects</h2>
+
+            <div class="project-grid">
+                <!-- Projekt 6: FindMySpot App (New!) -->
+                <article class="project-card">
+                    <div class="card-image"
+                        style="background: radial-gradient(circle, #1e293b, #0f172a); display:flex; align-items:center; justify-content:center;">
+                        <img src="images/findmyspot_dashboard.png" alt="FindMySpot App"
+                            style="width: 100%; opacity: 1;">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">OSM Data</span>
+                        </div>
+                        <h3>FindMySpot App</h3>
+                        <p>Interaktive Web-App zur Parkplatzsuche mit Live-Filtern und Statistik-Dashboard.</p>
+                        <div class="card-links">
+                            <a href="projekt6.html" class="link-btn">View App →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projekt 1: Battery Temp Visu -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="images/bat_temp_visu.png" alt="Battery Visualization">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Engineering</span>
+                        </div>
+                        <h3>Battery Temp Visu</h3>
+                        <p>Visualisierungstool für die thermische Analyse von E-LKW-Batteriesystemen zur Optimierung der
+                            Kühlung.</p>
+                        <div class="card-links">
+                            <a href="projekt1.html" class="link-btn">View Case Study →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projekt 5: Degradation Prediction -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <!-- Placeholder if no specific image for #5, reusing logic or finding image name from prev step -->
+                        <!-- Looking at file list, maybe no image in root images dir for this specific one, usually inside html. 
+                              Scanning projekt5.html... it uses iframe mostly. I'll use a placeholder or generic.
+                              Actually, let's use the graph from projekt2 as placeholder if needed, or better, no image?
+                              Wait, projekt5 has no img tag in the top level. I will use a gradient div. -->
+                        <div style="width:100%; height:100%; background: linear-gradient(45deg, #10b981, #3b82f6);">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">NASA Dataset</span>
+                            <span class="tag">Predictive Maintenance</span>
+                        </div>
+                        <h3>Li-Ion Degradation</h3>
+                        <p>ML-Modell zur Prognose der Restlebensdauer (RUL) und Kapazität von Akkuzellen.</p>
+                        <div class="card-links">
+                            <a href="projekt5.html" class="link-btn">View Prediction Tool →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projekt 4: Ausgaben ML -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="images/Ausgaben_kategorisierung.png" alt="Finance ML">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                        <h3>Smart Expenses</h3>
+                        <p>ML-gestützte Kategorisierung persönlicher Finanzen. Automatisiert die Buchhaltung.</p>
+                        <div class="card-links">
+                            <a href="projekt4.html" class="link-btn">View Project →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projekt 2: FFT Vibration -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="images/plot.png" alt="FFT Analysis">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag">Signal Processing</span>
+                            <span class="tag">SciPy</span>
+                            <span class="tag">IoT</span>
+                        </div>
+                        <h3>Gearbox Diagnosis</h3>
+                        <p>Früherkennung von Getriebeschäden mittels FFT-Frequenzanalyse und Vibrationsdaten.</p>
+                        <div class="card-links">
+                            <a href="projekt2.html" class="link-btn">View Analysis →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projekt 3: Trading Bot -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="images/Techstack_bot.png" alt="Trading Bot">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">Crypto</span>
+                        </div>
+                        <h3>Auto-Trading Bot</h3>
+                        <p>Serverbasierter Bot für automatisierte Krypto-Trades mit Web-Interface.</p>
+                        <div class="card-links">
+                            <a href="projekt3.html" class="link-btn">View Project →</a>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
 
-    <!-- Newsletter-Anmeldeformular -->
-    <section id="newsletter" class="newsletter">
-        <h2>Abonniere unseren Newsletter</h2>
-        <form id="newsletter-form">
-            <!-- <form id="newsletter-form" action="submit_form.php" method="post"></form> -->
-            <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
-            <button type="submit" class="btn">Abonnieren</button>
-            <p id="form-message" style="color: #ff6f61; margin-top: 10px;"></p>
-        </form>
-        <script>
-            document.getElementById("newsletter-form").addEventListener("submit", function (event) {
-                event.preventDefault();
-                document.getElementById("form-message").innerHTML = "GitHub Pages erlaubt leider kein PHP 😢<br><br>Aber du findest unten meine Social-Links oder kannst mir direkt per <br>E-Mail schreiben.";
-            });
-        </script>
-    </section>
+    <!-- Support / Podcast Section -->
+    <section class="glass-section">
+        <div class="container">
+            <!-- Podcast -->
+            <div id="podcast" class="glass-card">
+                <div style="flex: 1;">
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">🎙️ Spill the Ruchtea</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                        Meine Schwester und ich plaudern aus dem Nähkästchen: über Weltreisen, Technik und alles
+                        dazwischen.
+                        Vom Nerd-Talk bis zum Deep-Dive.
+                    </p>
+                    <a href="https://open.spotify.com/show/3nb4D9dLaIfCeybaXjbPjr" target="_blank" class="btn"
+                        style="background: #1DB954;">Listen on Spotify</a>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/show/3nb4D9dLaIfCeybaXjbPjr?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+            </div>
 
-    <!-- Buy Me a Coffee Section -->
-    <section id="buy-me-a-coffee" class="buy-me-a-coffee bg-gray-800 text-white py-16">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-            <!-- Text Section -->
-            <div class="text-center md:text-left mb-8 md:mb-0 md:w-1/2">
-                <h2 class="text-4xl font-semibold text-white mb-6">Buy Me a Coffee</h2>
-                <p class="text-lg text-gray-300 mb-4">Enjoying my work? Consider buying me a coffee to show your
-                    support!</p>
-                <a href="https://pay.sumup.com/b2c/QONZW38O" target="_blank"
-                    class="btn bg-orange-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-orange-400 transition duration-300">Buy
-                    Me a Coffee</a>
-            </div>
-            <!-- Image Section -->
-            <div class="coffee-image md:w-1/2 text-center">
-                <img src="images/mokka.png" alt="Buy Me a Coffee" class="coffee-cup w-32 mx-auto">
-            </div>
-        </div>
-    </section>
-
-    <!-- Podcast Section -->
-    <section id="podcast" class="podcast bg-blue-800 text-white py-16">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-            <!-- Player Section (nun links) -->
-            <div class="podcast-player md:w-1/2 text-center md:order-1">
-                <iframe title="Mein Podcast"
-                    src="https://open.spotify.com/embed/show/3nb4D9dLaIfCeybaXjbPjr?utm_source=generator&amp;theme=0"
-                    width="100%" height="352"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
-                    class="rounded-xl"
-                    style="border:none;border-radius:12px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)"></iframe>
-            </div>
-            <!-- Text Section (nun rechts) -->
-            <div class="text-center md:text-left mb-8 md:mb-0 md:w-1/2 md:order-2">
-                <h2 class="text-4xl font-semibold text-white mb-6">Spill the Ruchtea</h2>
-                <p class="text-lg text-gray-300 mb-4">
-                    Meine Schwester und ich plaudern im Podcast aus dem Nähkästchen: über Weltreisen, Technikspielereien
-                    und alles dazwischen.
-                </p>
+            <!-- Buy Me A Coffee -->
+            <div id="buy-me-a-coffee" class="glass-card" style="margin-bottom: 0;">
+                <div style="flex: 0 0 150px; text-align: center;">
+                    <img src="images/mokka.png" alt="Coffee Cup"
+                        style="width: 120px; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5));">
+                </div>
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Fuel my creativity ☕</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                        If you enjoy my work or open-source contributions, a coffee is always appreciated! It keeps the
+                        code flowing and the servers running.
+                    </p>
+                    <a href="https://pay.sumup.com/b2c/QONZW38O" target="_blank" class="btn"
+                        style="background: #ff813f;">Buy Me a Coffee</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, please reach out!</p>
-        <a href="mailto:gianruchti@gmail.com" class="btn">Email Me</a>
+    <!-- Contact & Footer -->
+    <footer id="contact">
+        <div class="container contact">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Let's work together.</h2>
+            <p style="color: var(--text-muted); margin-bottom: 3rem;">Have a project in mind? I'd love to hear from you.
+            </p>
 
-        <!-- Social Media Links -->
-        <div class="social-media">
-            <a href="https://www.linkedin.com/in/gian-ruchti-a43a03222/" target="_blank" class="social-link">
-                <img src="images/linkedin-in-brands-solid.svg" alt="LinkedIn" class="social-icon"> LinkedIn
-            </a>
-            <a href="https://www.instagram.com/ruchtigian/" target="_blank" class="social-link">
-                <img src="images/instagram-brands-solid.svg" alt="Instagram" class="social-icon"> Instagram
-            </a>
+            <a href="mailto:gianruchti@gmail.com" class="btn">Say Hello 👋</a>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/gian-ruchti-a43a03222/" target="_blank" class="social-icon"
+                    aria-label="LinkedIn">
+                    <img src="images/linkedin-in-brands-solid.svg" alt="">
+                </a>
+                <a href="https://www.instagram.com/ruchtigian/" target="_blank" class="social-icon"
+                    aria-label="Instagram">
+                    <img src="images/instagram-brands-solid.svg" alt="">
+                </a>
+                <!-- Added GitHub icon assumption based on context, if user clicks it they can edit href later -->
+                <a href="https://github.com/rucg" target="_blank" class="social-icon" aria-label="GitHub">
+                    <!-- SVG code for github icon since it might not be in images folder yet, using simple img tag with generic placeholder path if exists, else text -->
+                    <!-- Wait, looking at file list, no github icon. I'll rely on the existing SVGs or skip icon for now, 
+                         or better -> just reuse the logic. I won't add a broken image. 
+                         I'll assume there is no github icon image yet. -->
+                    <span style="font-weight:bold; font-size: 0.8rem; color:white;">GH</span>
+                </a>
+            </div>
+
+            <p style="margin-top: 4rem; color: #475569; font-size: 0.9rem;">
+                &copy; 2026 Gian Ruchti. Built with <span style="color: var(--accent);">❤</span> and Code.
+            </p>
         </div>
-    </section>
+    </footer>
 
-    <div id="footer-placeholder"></div>
-
-    <script>
-        fetch("header.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("header-placeholder").innerHTML = data);
-
-        fetch("footer.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("footer-placeholder").innerHTML = data);
-    </script>
 </body>
 
 </html>

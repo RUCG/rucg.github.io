@@ -4,53 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt 4 - ML-gestützte Ausgabenkategorisierung</title>
-    <meta name="description"
-        content="Python-basiertes Machine-Learning-Tool zur automatischen Kategorisierung persönlicher Ausgaben.">
-    <meta name="keywords"
-        content="Machine Learning, Python, Pandas, Scikit-learn, Ausgabenkategorisierung, Datenklassifikation">
-    <link rel="stylesheet" href="styles.css"> <!-- Verlinke die Haupt-CSS-Datei -->
+    <title>Gearbox Diagnosis | Gian Ruchti</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700&display=swap"
+        rel="stylesheet">
+    <script defer src="scripts.js"></script>
 </head>
 
 <body>
     <div id="header-placeholder"></div>
 
-    <section class="project-detail">
-        <h1>FFT-Vibrationsanalyse für Getriebediagnose</h1>
-        <h2>Projektbeschreibung</h2>
+    <section class="project-detail-header">
+        <div class="container">
+            <h1>Gearbox Diagnosis</h1>
+            <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 1rem auto;">
+                Tool zur Früherkennung von Getriebeschäden mittels Frequenzanalyse.
+            </p>
+        </div>
+    </section>
+
+    <div class="container project-detail-content">
+        <div class="project-meta">
+            <div class="meta-item">
+                <span class="meta-label">Tech Stack</span>
+                <span class="meta-value">Python, SciPy, FFT</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Area</span>
+                <span class="meta-value">Predictive Maintenance</span>
+            </div>
+        </div>
+
+        <h2>Project Description</h2>
         <p>
             In diesem Projekt entwickelte ich ein Analyse-Tool in Python zur Auswertung von Vibrationsdaten eines
             Getriebesystems.
             Ziel war es, potenzielle Lagerschäden frühzeitig zu erkennen und damit zur zustandsbasierten Wartung
             beizutragen.
         </p>
-        <h2>Technische Details</h2>
+
+        <h3>Technical Approach</h3>
         <p>
             Das Tool nutzte die Fast-Fourier-Transformation (FFT), um Frequenzspektren aus Messdaten zu generieren, die
             typische Schadensmuster sichtbar machten.
             Verschiedene Betriebszustände des Getriebes wurden berücksichtigt, um möglichst präzise Ergebnisse zu
             erzielen.
         </p>
-        <ul>
-            <li><strong>Technologien:</strong> Python, NumPy, SciPy, FFT</li>
-            <li><strong>Einsatzbereich:</strong> Predictive Maintenance in der Antriebstechnik</li>
-            <li><strong>Rolle:</strong> Konzeption und Umsetzung des Tools im beruflichen Kontext</li>
-        </ul>
-        <img src="images/plot.png" alt="FFT-Plot der Vibrationsdaten" class="project-image" loading="lazy">
-        <img src="images/newplot.png" alt="Weitere Analyseansicht der Getriebeschwingungen" class="project-image"
-            loading="lazy">
-    </section>
+
+        <img src="images/plot.png" alt="FFT Plot" class="detail-image">
+        <img src="images/newplot.png" alt="Vibration Analysis" class="detail-image">
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html#projects" class="btn">← Back to Projects</a>
+        </div>
+    </div>
 
     <div id="footer-placeholder"></div>
-
     <script>
-        fetch("header.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("header-placeholder").innerHTML = data);
-
-        fetch("footer.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        fetch("header.html").then(res => res.text()).then(data => document.getElementById("header-placeholder").innerHTML = data);
+        fetch("footer.html").then(res => res.text()).then(data => document.getElementById("footer-placeholder").innerHTML = data);
     </script>
 </body>
 

@@ -4,69 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt 5 – Akku-Degradation Prognose</title>
-    <meta name="description"
-        content="Tool zur Prognose der Restlebensdauer von Akkus basierend auf thermischen und zyklischen Daten.">
-    <meta name="keywords" content="Akkualterung, Batterieprognose, Thermomodell, Lebensdauer, Machine Learning">
+    <title>Li-Ion Degradation Prediction | Gian Ruchti</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700&display=swap"
         rel="stylesheet">
+    <script defer src="scripts.js"></script>
     <style>
-        h1 {
-            color: #6a6868;
-        }
-
-        h2 {
-            color: #6a6868;
-        }
-
-        .card-box {
-            justify-content: center;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .card {
-            background: #1e1e1e;
-            border: 1px solid #444;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            margin: 2px;
-            min-width: 200px;
-            flex: 1 1 300px;
-            max-width: 400px;
-            text-align: left;
-        }
-
-        .project-detail h2 {
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        section:nth-of-type(even) {
-            background-color: #121212;
-        }
-
-        iframe {
-            border-radius: 0.8rem !important;
-            overflow: hidden;
-        }
-
-        .iframe-wrapper {
-            padding: 3px;
-            border: 2px solid transparent;
-            border-radius: 0.8rem;
-            background: linear-gradient(135deg, #ff6f61, #de4463);
-            background-origin: border-box;
-            margin: 50px;
-        }
-
-        .iframe-wrapper iframe {
-            border: none;
-            border-radius: 0.8rem;
+        /* Specific override for the Quarto iframe content to look good */
+        .iframe-container {
             width: 100%;
-            display: block;
+            height: 100vh;
+            border: none;
+            background: #fff;
+            border-radius: 12px;
         }
     </style>
 </head>
@@ -74,39 +24,50 @@
 <body>
     <div id="header-placeholder"></div>
 
-    <section class="project-detail">
-        <h1>Analyse und Prognose von Lithium-Ionen-Zellen</h1>
+    <section class="project-detail-header">
+        <div class="container">
+            <h1>Li-Ion Degradation</h1>
+            <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 1rem auto;">
+                Prognose von Kapazität und Innenwiderstand basierend auf dem NASA Battery Dataset.
+            </p>
+        </div>
+    </section>
+
+    <div class="container project-detail-content">
+        <div class="project-meta">
+            <div class="meta-item">
+                <span class="meta-label">Data</span>
+                <span class="meta-value">NASA Battery Dataset</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Stack</span>
+                <span class="meta-value">Quarto, Scikit-learn, Plotly</span>
+            </div>
+        </div>
+
+        <h2>Analysis Overview</h2>
         <p>
             Dieses Tool visualisiert die Daten, die wir zu Beginn dieser Arbeit ausgewertet haben. Zusätzlich haben wir
             ein Modell trainiert, das mithilfe linearer Regression Vorhersagen zur Kapazität und zum Innenwiderstand
             ermöglicht.
             So erhält man einen Einblick, wann im Lebenszyklus eine Akkuzelle der größten thermischen Belastung
-            ausgesetzt ist und wie sich die Zelle verhält, nachdem sie eine Kapazität von 70% RUL unterschreitet.
+            ausgesetzt ist.
         </p>
-        <h2>Technische Details</h2>
-        <div class="card-box">
-            <div class="card"><strong>Technologien:</strong><br>Quarto, Python</div>
-            <div class="card"><strong>Bibliotheken:</strong><br>Pandas, NumPy, Scikit-learn, Plotly, Matplotlib</div>
-            <div class="card"><strong>Datenquelle:</strong><br>NASA Battery Dataset</div>
-            <div class="card"><strong>Fokus:</strong><br>Datenvisualisierung, thermische Belastung, Batteriealterung,
-                Prognose</div>
+
+        <!-- Iframe wrapper for the external content -->
+        <div class="iframe-wrapper" style="margin-top: 2rem;">
+            <iframe src="degradationPrediction2.html" class="iframe-container" title="Degradation Prediction"></iframe>
         </div>
 
-        <div class="iframe-wrapper">
-            <iframe src="degradationPrediction2.html" width="100%" height="4900px" scrolling="yes"></iframe>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html#projects" class="btn">← Back to Projects</a>
         </div>
-    </section>
+    </div>
 
     <div id="footer-placeholder"></div>
-
     <script>
-        fetch("header.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("header-placeholder").innerHTML = data);
-
-        fetch("footer.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        fetch("header.html").then(res => res.text()).then(data => document.getElementById("header-placeholder").innerHTML = data);
+        fetch("footer.html").then(res => res.text()).then(data => document.getElementById("footer-placeholder").innerHTML = data);
     </script>
 </body>
 

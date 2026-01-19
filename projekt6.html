@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindMySpot - Parking App | Gian Ruchti</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700&display=swap"
+        rel="stylesheet">
+    <script defer src="scripts.js"></script>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="project-detail-header">
+        <div class="container">
+            <h1>FindMySpot App</h1>
+            <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 1rem auto;">
+                Interaktive Web-App zur Suche von Parkplätzen mit Echtzeit-Filtern und Umkreissuche.
+            </p>
+        </div>
+    </section>
+
+    <div class="container project-detail-content">
+        <div class="project-meta">
+            <div class="meta-item">
+                <span class="meta-label">Stack</span>
+                <span class="meta-value">Python, Flask, MongoDB</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Data</span>
+                <span class="meta-value">OpenStreetMap (OSM)</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Type</span>
+                <span class="meta-value">University Team Project</span>
+            </div>
+        </div>
+
+        <h2>Project Overview</h2>
+        <p>
+            FindMySpot ist eine Daten-getriebene Webanwendung, die Autofahrern in Winterthur hilft, schnell die passende
+            Parkmöglichkeit zu finden.
+            Statt einer einfachen Karte bietet die App ein intelligentes Dashboard mit Such-, Filter- und
+            Statistik-Funktionen.
+        </p>
+
+        <h3>Key Features</h3>
+        <ul style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.8;">
+            <li><strong>Smart Search:</strong> Findet Parkplätze via Name oder Straßensuche.</li>
+            <li><strong>Radius-Filter:</strong> Slider für Umkreissuche (100m bis 5km) um einen gewählten Punkt.</li>
+            <li><strong>Data Safety:</strong> Konservatives 24/7-Labeling – wir zeigen "24h geöffnet" nur an, wenn die
+                Daten es 100% bestätigen.</li>
+            <li><strong>Analytics:</strong> Live-Statistik der verfügbaren Parkplätze im Dashboard.</li>
+        </ul>
+
+        <div
+            style="margin: 3rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 0 30px rgba(6, 182, 212, 0.2);">
+            <img src="images/findmyspot_dashboard.png" alt="FindMySpot Live Dashboard"
+                style="width: 100%; display: block;">
+        </div>
+
+        <h3>Technical Architecture</h3>
+        <p>
+            Das Backend basiert auf <strong>Flask (Python)</strong> und einer <strong>MongoDB</strong>-Datenbank, die
+            regelmäßig mit OpenStreetMap-Daten synchronisiert wird.
+            Die Architektur umfasst zudem eine REST-API für die Kommunikation zwischen Frontend und Datenbank sowie ein
+            Admin-Dashboard zur Verwaltung.
+        </p>
+
+        <img src="images/findmyspot_logo.png" alt="FindMySpot Logo" class="detail-image"
+            style="max-width: 300px; display: block; margin: 2rem auto;">
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html#projects" class="btn">← Back to Projects</a>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch("header.html").then(res => res.text()).then(data => document.getElementById("header-placeholder").innerHTML = data);
+        fetch("footer.html").then(res => res.text()).then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    </script>
+</body>
+
+</html>
